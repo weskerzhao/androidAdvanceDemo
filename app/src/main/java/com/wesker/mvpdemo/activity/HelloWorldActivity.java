@@ -69,7 +69,13 @@ public class HelloWorldActivity extends MvpActivity<HelloWorldView, HelloWorldPr
 
     @Override
     public void startAIDLActivity() {
-        Intent intent = new Intent(this, BookManagerActivity.class);
+        Intent intent = null;
+        try {
+            //反射启动activity
+            intent = new Intent(this, getClass().forName("com.wesker.mvpdemo.activity.BookManagerActivity"));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         startActivity(intent);
     }
 
