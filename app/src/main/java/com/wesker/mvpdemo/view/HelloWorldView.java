@@ -21,4 +21,6 @@ public interface HelloWorldView extends MvpView {
     void toBanner();
 
     void startAIDLActivity();
+
+    void startProviderActivity();
 }

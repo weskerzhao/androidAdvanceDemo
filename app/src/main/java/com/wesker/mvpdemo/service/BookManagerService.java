@@ -17,6 +17,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class BookManagerService extends Service {
+
     private static final String TAG = "BMS";
 
     private CopyOnWriteArrayList<Book> mBookList = new CopyOnWriteArrayList<>();

@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.wesker.contentprovider">
+
+    <application>
+        <provider
+            android:name="com.wesker.contentprovider.BookProvider"
+            android:authorities="com.wesker.contentprovider.bookprovider"
+            android:permission="com.wesker.PROVIDER"
+            android:process=":provider">
+        </provider>
+    </application>
+</manifest>

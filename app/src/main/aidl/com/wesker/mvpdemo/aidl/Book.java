@@ -10,6 +10,8 @@ import android.os.Parcelable;
 public class Book implements Parcelable {
     private int id;
     private String name;
+    public Book() {
+    }
 
     public Book(int id, String name) {
         this.id = id;
