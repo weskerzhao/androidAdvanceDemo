@@ -92,10 +92,23 @@ public class HelloWorldActivity extends MvpActivity<HelloWorldView, HelloWorldPr
     }
 
     @Override
+    public void startSocketActivity() {
+        Intent intent = null;
+        try {
+            //反射启动activity
+            intent = new Intent(this, getClass().forName("com.wesker.mvpdemo.activity.SocketActivity"));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        startActivity(intent);
+    }
+
+    @Override
     public void toBanner() {
         Intent intent = new Intent(this, BannerActivity.class);
         startActivity(intent);
     }
+
 
 
     @OnClick(R.id.helloButton)
@@ -128,6 +141,11 @@ public class HelloWorldActivity extends MvpActivity<HelloWorldView, HelloWorldPr
     @OnClick(R.id.startProviderActivity)
     public void onstartProviderClicked() {
         presenter.startProviderActivity();
+    }
+
+    @OnClick(R.id.startSocketActivity)
+    public void onSocketClicked() {
+        presenter.startSocketActivity();
     }
 
     @Override

@@ -48,6 +48,8 @@
         </activity>
         <activity android:name=".activity.ProviderActivity">
         </activity>
+        <activity android:name=".activity.SocketActivity">
+        </activity>
     </application>
 
 </manifest>

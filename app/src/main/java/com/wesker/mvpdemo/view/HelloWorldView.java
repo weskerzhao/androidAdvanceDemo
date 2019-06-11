@@ -23,4 +23,6 @@ public interface HelloWorldView extends MvpView {
     void startAIDLActivity();
 
     void startProviderActivity();
+
+    void startSocketActivity();
 }

@@ -115,4 +115,14 @@ public class HelloWorldPresenter extends MvpBasePresenter<HelloWorldView> {
         });
 
     }
+    public void startSocketActivity() {
+        ifViewAttached(new ViewAction<HelloWorldView>() {
+            @Override
+            public void run(@NonNull HelloWorldView view) {
+
+                view.  startSocketActivity();
+            }
+        });
+
+    }
 }
